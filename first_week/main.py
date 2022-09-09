@@ -1,7 +1,5 @@
 # Guido van Rossum <guido@python.org>
 
-from re import A
-
 
 def get_answer():
     answer = input()
