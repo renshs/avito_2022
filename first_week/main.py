@@ -2,6 +2,10 @@
 
 
 def get_answer():
+
+    """
+    Function that asks for answer from stdin
+    """
     answer = input()
     while "1" not in answer and "2" not in answer:
         print("Я не понял, повторите ответ, пожалуйста")
@@ -26,6 +30,10 @@ def step1():
 
 
 def step2_umbrella():
+
+    """
+    Function that is called when the duck took the umbrella
+    """
     options = {
         "Веруться домой": 1,
         "Идём в бар!": 2,
@@ -48,6 +56,10 @@ def step2_umbrella():
 
 
 def step2_no_umbrella():
+
+    """
+    Function that is called when the duck didn't take the umbrella
+    """
     print("Зонт ни к чему, погода обещает быть замечательной!\n" \
           "На небе всего лишь одна малеькая тучка, не стоит  беспокоиться.\n" \
           "О нет! Кажется, собирается ливень!\n" \
