@@ -64,14 +64,25 @@ def print_repot() -> None:
 def create_report_csv() -> None:
 
     """
-    some description here
+    This function creates .csv file with information about departaments
+    pretty_csv - list for creating pretty looking .csv
     """
     with open("report.csv", 'w') as data:
         dict_report = create_report()
-        report = csv.DictWriter(data, dict_report)
+        pretty_csv = []
+        for departament in dict_report:
+            current_departament = {}
+            current_departament['Департамент'] = departament
+            for chararacteristic in dict_report[departament]:
+                if chararacteristic != 'Зарплатный фонд':
+                    current_departament[chararacteristic] = dict_report[departament][chararacteristic]
+            pretty_csv.append(current_departament)
+        keys = pretty_csv[0].keys()
+        report = csv.DictWriter(data, keys)
 
+        
         report.writeheader()
-        report.writerow(dict_report)
+        report.writerows(pretty_csv)
 
 
 def menu() -> None:
