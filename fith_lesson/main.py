@@ -1,4 +1,3 @@
-import imp
 from typing import List
 
 class CountVectorizer:
