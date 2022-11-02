@@ -67,7 +67,7 @@ def create_report_csv() -> None:
     This function creates .csv file with information about departaments
     pretty_csv - list for creating pretty looking .csv
     """
-    with open("report.csv", 'w') as data:
+    with open('report.csv', 'w') as data:
         dict_report = create_report()
         pretty_csv = []
         for departament in dict_report:
